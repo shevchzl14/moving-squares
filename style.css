@@ -9,38 +9,48 @@ body {
     overflow: hidden;
 }
 
-.animation {
-    position: relative;
+.container {
     width: 100%;
     height: 300px;
+    position: relative;
     overflow: hidden;
+}
+
+.squares {
+    position: absolute;
+    width: 430px;
+    height: 220px;
+    left: 100%;
+    top: 20px;
+    animation: moveLeft 6s linear infinite;
 }
 
 .square {
     position: absolute;
-    width: 180px;
-    height: 180px;
-    animation: moveLeft 5s linear infinite;
 }
 
 .red {
+    width: 260px;
+    height: 155px;
     background-color: red;
-    top: 20px;
-    left: 100%;
+    left: 0;
+    top: 0;
 }
 
 .blue {
+    width: 122px;
+    height: 155px;
     background-color: blue;
-    top: 80px;
-    left: 100%;
-    animation-delay: 1s;
+    left: 50px;
+    top: 50px;
 }
 
 .green {
+    width: 260px;
+    height: 192px;
     background-color: green;
-    top: 40px;
-    left: 100%;
-    animation-delay: 2s;
+    left: 170px;
+    top: 25px;
 }
 
 @keyframes moveLeft {
@@ -49,6 +59,6 @@ body {
     }
 
     to {
-        transform: translateX(-110vw);
+        transform: translateX(-150vw);
     }
 }
